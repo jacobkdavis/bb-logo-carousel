@@ -12,7 +12,7 @@ class FLLogoCarouselModule extends FLBuilderModule {
 		parent::__construct(array(
 			'name'            => __( 'Logo Carousel', 'fl-builder' ),
 			'description'     => __( 'Display a carousel of your WordPress posts.', 'fl-builder' ),
-			'category'        => __( 'Posts', 'fl-builder' ),
+			'category'        => __( 'Media', 'fl-builder' ),
 			'editor_export'   => false,
 			'partial_refresh' => true,
 			'icon'            => 'slides.svg',
