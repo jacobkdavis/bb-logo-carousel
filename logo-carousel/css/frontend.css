@@ -1,0 +1,236 @@
+/* Post Slider */
+
+/* Wrappers */
+body.rtl .fl-module-logo-carousel .bx-viewport {
+	direction: ltr;
+}
+body.rtl .fl-logo-carousel-post {
+	direction: rtl;
+}
+.fl-module-logo-carousel .bx-wrapper {
+	max-width: 100% !important;
+	margin: 0 auto 40px;
+}
+.fl-module-logo-carousel .bx-controls {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin-top: 20px;
+}
+
+.fl-logo-carousel-navigation{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	margin-top: -16px;
+}
+.fl-logo-carousel-navigation a{
+	position: absolute;
+	display: inline-block;
+	opacity: .7;
+}
+.fl-logo-carousel-navigation a:hover{ opacity: 1; }
+
+.fl-logo-carousel-navigation .carousel-prev{ left: 0; }
+.fl-logo-carousel-navigation .carousel-next{ right: 0; }
+
+.fl-logo-carousel-navigation .fl-logo-carousel-svg-container{
+	position: relative;
+	width: 32px;
+	height: 32px;
+}
+.fl-logo-carousel-navigation svg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.fl-logo-carousel-navigation path{ fill: #fff; }
+
+.fl-logo-carousel-navigation a.disabled,
+.bx-controls a.disabled {
+	pointer-events: none;
+}
+
+/*Module styles =======================================*/
+
+/* Post Carousel */
+.fl-logo-carousel {
+	margin: 0 auto;
+	position: relative;
+}
+
+.fl-logo-carousel-wrapper:before,
+.fl-logo-carousel-wrapper:after {
+	content: '';
+	display: table;
+}
+.fl-logo-carousel-wrapper:after {
+	clear: both;
+}
+
+.fl-logo-carousel-post {
+	position: absolute;
+	top: 0;
+	float: left;
+	visibility: hidden;
+	background: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.fl-logo-carousel-loaded .fl-logo-carousel-post {
+	position: relative;
+	visibility: visible;
+	margin: 0;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+
+.fl-logo-carousel-image img {
+	height: auto !important;
+	width: 100% !important;
+}
+.fl-logo-carousel-image .fl-photo-content {
+	display: block;
+}
+
+/* Layout - post grid */
+.fl-logo-carousel-post {
+	border: 0;
+}
+.fl-logo-carousel-text {
+	padding: 20px;
+}
+.fl-logo-carousel-title {
+	padding-bottom: 7px;
+}
+.fl-logo-carousel-content {
+	font-size: 14px;
+	line-height: 22px;
+}
+.fl-logo-carousel-content p:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.fl-logo-carousel-title {
+	font-size: 20px;
+	line-height: 26px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+.fl-logo-carousel-meta {
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+/* Layout - post gallery */
+
+.fl-logo-carousel-gallery .fl-logo-carousel-link {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+.fl-logo-carousel-gallery .fl-logo-carousel-img {
+	position: relative;
+	z-index: 1;
+}
+
+.fl-logo-carousel-gallery .fl-logo-carousel-text-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	text-align: center;
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.fl-logo-carousel-gallery .fl-post-no-crop .fl-logo-carousel-text-wrap,
+.fl-logo-carousel-gallery .fl-post-no-crop .fl-logo-carousel-text{
+	position: relative;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	-webkit-transform: none;
+	   -moz-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+}
+
+.fl-logo-carousel-gallery .fl-logo-carousel-link:hover .fl-logo-carousel-text-wrap,
+.fl-logo-carousel-gallery .fl-logo-carousel-post.fl-post-no-thumb .fl-logo-carousel-text-wrap {
+	filter: alpha(opacity = 100);
+	opacity: 1;
+}
+
+.fl-logo-carousel-gallery .fl-logo-carousel-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+.fl-logo-carousel-gallery .fl-logo-carousel-text h2.fl-logo-carousel-title {
+	font-size: 22px;
+	margin: 0 0 5px 0;
+}
+
+/* slide ratio - for slides with no thumb */
+.fl-logo-carousel-gallery .fl-logo-carousel-ratio{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.fl-logo-carousel-gallery .fl-logo-carousel-ratio{ padding-bottom: 70%; }
+
+.fl-logo-carousel-gallery .fl-carousel-icon{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.fl-logo-carousel-gallery .fl-carousel-icon i,
+.fl-logo-carousel-gallery .fl-carousel-icon i:before{
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+}
+
+/* Gallery Transitions */
+.fl-logo-carousel-gallery .fl-logo-carousel-text,
+.fl-logo-carousel-gallery .fl-logo-carousel-link:hover .fl-logo-carousel-text,
+.fl-logo-carousel-gallery .fl-logo-carousel-post.fl-post-no-thumb .fl-logo-carousel-text{
+	-webkit-transform: translate3d(-50%,-50%,0);
+	   -moz-transform: translate3d(-50%,-50%,0);
+	    -ms-transform: translate(-50%,-50%);
+			transform: translate3d(-50%,-50%,0);
+}
+
+/* Common Styles */
+body .fl-logo-carousel-text a {
+	text-decoration: none;
+}
+
+
+.fl-logo-carousel-post {
+	justify-content: center;
+}
+
+
