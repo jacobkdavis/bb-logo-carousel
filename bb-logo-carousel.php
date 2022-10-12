@@ -3,7 +3,7 @@
  * Plugin Name: BB Logo Carousel
  * Plugin URI: https://github.com/jacobkdavis/bb-logo-carousel
  * Description: Custom beaver builder module for a logo / brand carousel
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Jacob Davis
  * Author URI: http://jacobkdavis.com
  * GitHub Plugin URI: jacobkdavis/bb-logo-carousel
